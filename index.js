@@ -1,9 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+// loop through the array using a for loop
+for(let i = 0; i < array.length; i++) {
+// create a nested for loop and loop through the array again 
+  for(let j = 0; j < array.length; j++) {
+// if array at index i plus array at index j equals target then return true
+    if(array[i] + array[j] === target && i !== j) return true;
+  }
+}
+// otherwise return false
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  worst case scenario is that this will take n + n loops to return a value 
+  0[n^2]
 */
 
 /* 
